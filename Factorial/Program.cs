@@ -15,6 +15,10 @@ namespace Factorial
 
             Console.WriteLine($"LOOP calculation: Factorial of {n} is {CalculateLoop(n)}");
             Console.WriteLine($"LOOP2 calculation: Factorial of {n} is {CalculateLoop(n)}");
+            
+            //recursion calculation
+            Console.WriteLine($"Recursion calculation: Factorial of {n} is {CalculateRecursion(n)}");
+            
         }
 
         private static int CalculateLoop(int n)
@@ -39,6 +43,15 @@ namespace Factorial
             }
 
             return factorial;
+        }
+        //Calculating n using recursion
+
+        private static int CalculateRecursion(int n)
+        {
+            if (n == 1)
+                return 1;
+
+            return n * CalculateRecursion(n - 1);
         }
     }
 }
